@@ -45,7 +45,6 @@ c2 = Customer "Anton" 85 99
 c3 = Customer "Alice" 90 120
 c4 = Customer "Jack" 44 80
 
---testProjectJSON = encodeJSON (Project "New Project" "Succeeded" [Build "2010-10-02 build 2" "Succeeded", Build "2010-10-01 build 1" "Failed"])
 testProjectJSON = encodeJSON $ calculateRanking [c1,c2,c3,c4]
 
 main = simpleHTTP nullConf $ ok $ toResponse testProjectJSON
